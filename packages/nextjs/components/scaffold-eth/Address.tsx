@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Blockies from "react-blockies";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+//import { CopyToClipboard } from "react-copy-to-clipboard";
 import { isAddress } from "viem";
 import { useEnsAvatar, useEnsName } from "wagmi";
 import { hardhat } from "wagmi/chains";
@@ -119,20 +119,20 @@ export const Address = ({ address, disableAddressLink, format, size = "base" }: 
           aria-hidden="true"
         />
       ) : (
-        <CopyToClipboard
-          text={address}
-          onCopy={() => {
-            setAddressCopied(true);
-            setTimeout(() => {
-              setAddressCopied(false);
-            }, 800);
-          }}
-        >
-          <DocumentDuplicateIcon
-            className="ml-1.5 text-xl font-normal text-sky-600 h-5 w-5 cursor-pointer"
-            aria-hidden="true"
-          />
-        </CopyToClipboard>
+        //<CopyToClipboard
+        //  text={address}
+        //  onCopy={() => {
+        //    setAddressCopied(true);
+        //    setTimeout(() => {
+        //      setAddressCopied(false);
+        //    }, 800);
+        //  }}
+        //>
+        //  <DocumentDuplicateIcon
+        //    className="ml-1.5 text-xl font-normal text-sky-600 h-5 w-5 cursor-pointer"
+        //    aria-hidden="true"
+        //  />
+        //</CopyToClipboard>
       )}
     </div>
   );
